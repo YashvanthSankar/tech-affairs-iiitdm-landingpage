@@ -8,7 +8,7 @@
 }
 
 body{
-    padding: 5em;
+    padding: 1em;
     background: #EEAECA;
     background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
@@ -77,7 +77,9 @@ body{
 }
 
 .main_banner{
-    margin-top: 3.5em;
+    flex: 1;
+    margin: 2rem;
+    margin-top: 7em;
     display: flex;
     flex-direction: row;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -114,6 +116,7 @@ body{
 }
 
 .mission{
+    margin: 2rem;
     margin-top: 2em;
     object-fit: cover;
     display: flex;
@@ -132,7 +135,7 @@ body{
 
 @media (max-width: 992px) {
   .nav-links {
-    font-weight: 700;
+    font-weight: 900;
     visibility: hidden;
     flex-direction: column;
     position: absolute;
@@ -142,7 +145,7 @@ body{
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* soft shadow */
-    background: rgba(255, 255, 255, 0.2); /* transparent white */
+    background: rgba(255, 255, 255, 0.5); /* transparent white */
     backdrop-filter: blur(200px);          /* frosted glass */
     -webkit-backdrop-filter: blur(30px);  /* for Safari */
 
@@ -163,6 +166,10 @@ body{
     font-size: 1.5em;
     display: block;
     color: #1e293b;
+    transition: transform 0.3s;
+  }
+  .hamburger:hover{
+    transform: scale(1.1);
   }
   .nav-titleset p {
     margin-left: 1em;
@@ -173,11 +180,15 @@ body{
   }
   .main_banner{
     flex-direction: column;
+    margin: 0;
+    margin-top: 6em;
   }
   .main_banner img, .mission img{
     max-width: 100%;
   }
   .mission{
+    margin: 0;
+    margin-top: 2em;
     flex-direction: column;
   }
   
