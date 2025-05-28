@@ -352,6 +352,7 @@ footer h3 a{
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
+  user-select: none;
 }
 .club-card:hover{
   transform: scale(1.1);
@@ -372,6 +373,8 @@ footer h3 a{
 }
 
 
+
+
 @media (max-width: 992px) {
   .nav-links {
     visibility: hidden;
@@ -386,7 +389,7 @@ footer h3 a{
     background: rgba(255, 255, 255, 0.6); /* transparent white */
     backdrop-filter: blur(15px);          /* frosted glass */
     -webkit-backdrop-filter: blur(15px);  /* for Safari */
-    z-index: 998
+    z-index: 998;
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
