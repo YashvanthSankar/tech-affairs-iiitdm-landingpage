@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Clubs | Technical Affairs IIITDM</title>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <a class="nav-titleset" href="/">
+            <img src="images/logo.png" alt="Technical Affairs IIITDM">
+            <p class="logo-title">Tech Affairs IIITDM</p>
+        </a>
+        <div class="nav-links" id="navlinks">
+            <a href="/">HOME</a>
+            <a href="/clubs.html">CLUBS</a>
+            <a href="/#about-sec">ABOUT</a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+
+
+    <section class="clubs">
+
+    </section>
+
+
+    <footer style="position: fixed; bottom: 0;width: 98%;">
+        <a class="footer-title" href="#">TECHNICAL AFFAIRS IIITDM</a>
+        <h3 class="wlove">Made with <i class="fas fa-heart"></i> by <a class="yash" href="https://yashvanthsankar.github.io" target="_blank">Yashvanth S (CS24I1029)</a></h3>
+        <div>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/iiitdm.technical/" target="_blank">
+            <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/technical-affairs-iiitdm/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/channel/UCV0JKK0XVBhzvtuofQB5_5g" target="_blank">
+            <i class="fab fa-youtube"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:technical.affairs@iiitdm.ac.in">
+            <i class="fas fa-envelope"></i>
+            </a>
+
+        </div>
+        
+    </footer>
+
+
+
+
+    <script>
+        function toggleMenu() {
+            const navlinks = document.getElementById("navlinks");
+            navlinks.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
