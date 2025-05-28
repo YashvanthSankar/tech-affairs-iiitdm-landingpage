@@ -346,6 +346,11 @@ footer h3 a{
     margin-top: 2em;
     flex-direction: column;
   }
+
+  .main_banner div p, .mission p{
+    line-height: 1.5em;
+  }
+
   .journey{
     margin: 0;
     margin-top: 2em;
@@ -366,4 +371,19 @@ footer h3 a{
     margin-top: 2em;
   }
 
+  .card{
+    width: 180px;
+  }
+  .card img{
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card{
+    width: 160px;
+  }
+  .card img{
+    height: 160px;
+  }
 }
