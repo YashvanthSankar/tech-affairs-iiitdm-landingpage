@@ -27,7 +27,7 @@ body{
   justify-content: space-around;
   align-items: center;
   z-index: 999;
-  background: rgba(255, 255, 255, 0.05); /* transparent white */
+  background: rgba(255, 255, 255, 0.2); /* transparent white */
   backdrop-filter: blur(15px);          /* frosted glass */
   -webkit-backdrop-filter: blur(15px);  /* for Safari */
   padding: 1em 0;
@@ -69,10 +69,11 @@ body{
   text-decoration: none;
   font-weight: 500;
   color: #1e293b;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, font-weight 0.3s ease;
 }
 .nav-links a:hover{
   transform: scale(1.1);
+  font-weight: 700;
 }
 
 .hamburger{
@@ -166,14 +167,19 @@ body{
 .journey button{
   border: none;
   background: none;
+  text-decoration: wavy underline #ff4081;
+  cursor: pointer;
+  color: #222;
+  text-underline-offset: 4px;
   font-weight: 500;
   font-size: 1.2em;
   line-height: 2em;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .journey button:hover {
   transform: scale(1.1);
+  color: #ff4081;
 }
 
 .journey img{
@@ -271,7 +277,7 @@ footer h3{
 }
 footer h3 a{
   text-decoration: none;
-  color: #d80b56;
+  color: #8d55aa;
   margin: 0;
   padding: 0;
 }
@@ -354,7 +360,7 @@ footer h3 a{
   width: 100%;
   height: 250px;
   padding: 1em;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .club-card h3{
@@ -368,7 +374,6 @@ footer h3 a{
 
 @media (max-width: 992px) {
   .nav-links {
-    font-weight: 900;
     visibility: hidden;
     flex-direction: column;
     position: absolute;
@@ -378,15 +383,14 @@ footer h3 a{
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* soft shadow */
-    background: rgba(255, 255, 255, 0.5); /* transparent white */
-    backdrop-filter: blur(200px);          /* frosted glass */
-    -webkit-backdrop-filter: blur(30px);  /* for Safari */
-
+    background: rgba(255, 255, 255, 0.6); /* transparent white */
+    backdrop-filter: blur(15px);          /* frosted glass */
+    -webkit-backdrop-filter: blur(15px);  /* for Safari */
+    z-index: 998
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
-
   }
   .nav-links.active{
     visibility: visible;
@@ -395,11 +399,15 @@ footer h3 a{
     transform: translateY(0);
     pointer-events: all;
   }
+  .nav-links a{
+    font-weight: 700;
+  }
   .hamburger{
     font-size: 1.5em;
     display: block;
     color: #1e293b;
     transition: transform 0.3s;
+    user-select: none;
   }
   .hamburger:hover{
     transform: scale(1.1);
@@ -408,8 +416,8 @@ footer h3 a{
     margin-left: 1em;
   }
   .navbar{
-    left: 1em;
-    right: 1em;
+    left: 0.4em;
+    right: 0.4em;
   }
   .main_banner{
     flex-direction: column;
@@ -460,8 +468,17 @@ footer h3 a{
 }
 
 @media (max-width: 768px) {
+  body{
+    font-size: 0.8em;
+  }
   .card{
     width: 160px;
+  }
+  .sub-teams h3{
+    font-size: 1.4em;
+  }
+  #about-sec h2{
+    font-size: 1.9em;
   }
   .card img{
     height: 160px;
